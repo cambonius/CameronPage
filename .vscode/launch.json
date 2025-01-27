@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "http://localhost:8080",
+            "url": "file:///C:/Users/camer/Desktop/Assignments/Engineering/Website/ENGR11a/CameronPage/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
