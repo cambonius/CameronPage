@@ -322,7 +322,8 @@
                         <img src="assets/img/GitLogo.png" alt="Git Logo" class="img-fluid project-image">
                     </figure>
                 </div>
-                <p class="mb-5">After my first two 3d prints of the class. I was told I needed to publish them on a GitHub website.
+                <p class="mb-5">After my first two 3d prints of the class. I was told I needed to publish them on a
+                    GitHub website.
                     As it turns out, I already know how to work with GitHub thanks to COSI 116a: Information
                     Visualization, so I was able to quickly set up a GitHub page so working with GitHub turned out to
                     not be a problem. I downloaded this <a href="https://startbootstrap.com/theme/resume"> template</a>
@@ -421,8 +422,144 @@
                     didn't print completely, but it is still covered and it will not affect the functionality of the
                     PokeBall. I continued with printing the other parts, and following the steps in the tutorial, I was
                     able to create a PokeBall that opens and closes with a button! Overall, I am quite happy with the
-                    result, and I can't wait to print more things in the future!!!
+                    result, and I can't wait to print more things in the future!
                 </p>
+                <h3 class="mb-5 text-center">Design Project #3: Remixing 3D Designs</h3>
+                <h3 class="mb-0">The Lightning McQueen Chassis Enclosure Series</h3>
+
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                            aria-label="Slide 6"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" style="padding-bottom: 40px;">
+                            <img src="assets/img/Car/CarImage1.png" class="d-block w-100" alt="Lightning McQueen 1">
+                            <div class="carousel-caption d-none d-md-block">
+                            </div>
+                            <p class="text-center">To begin the design process for the chassis enclosure, my partner,
+                                Vivian, and I brainstormed potential concepts. Vivian proposed a race car theme, which I
+                                refined to model the enclosure after Lightning McQueen from Pixar’s Cars franchise.
+                                Given the complexity of modeling in Fusion360, I initiated the modeling process on
+                                February 13 to allow lots of time for refinement.
+                                Initially, I followed a <a
+                                    href="https://www.youtube.com/watch?v=voB4ggW-Gfg">tutorial</a> to guide the
+                                modeling process. The first step, which involved adding reference canvases in Fusion360,
+                                was beneficial. However, the remainder of the tutorial proved ineffective, as the
+                                resulting model failed to print correctly when converted to .3mf or .stl format. When
+                                sliced in PrusaSlicer, only support structures were generated, indicating an issue with
+                                model thickness. Attempts to add thickness resulted in the error message: “The operation
+                                could not create a valid result. Try adjusting the values or changing the input
+                                geometry.” The model’s geometry was too complex to modify effectively, necessitating a
+                                complete restart.
+                                After further research, I located another tutorial that utilized the Chevrolet Corvette
+                                C6 orthographic diagrams as reference canvases; the same car model that inspired
+                                Lightning McQueen’s design. Following <a
+                                    href="https://www.youtube.com/watch?v=wyqQtLjt_WM">this tutorial</a>, I successfully
+                                progressed through the initial steps until approximately the twelve-and-a-half-minute
+                                mark. At this stage, I encountered difficulties in creating accurate wheel holes due to
+                                differences in geometry between the tutorial model and my own. To address this
+                                challenge, I employed extruded cylinders to form the wheel holes, which proved to be an
+                                effective solution. After successfully incorporating this adjustment, I was able to
+                                extend the thickness of the car model without errors. The final model was successfully
+                                generated and appears as shown in the following image. I saved the .stl file and
+                                exported it to TinkerCad, where I could make more simple extrusions for the window
+                                shield, and McQueen’s signature number ‘95’ on each side of the car. Then, I exported
+                                the .stl file to PrusaSlicer to scale it based on the measurements done in class and was
+                                about to slice it to make supports...
+                            </p>
+                        </div>
+                        <div class="carousel-item" style="padding-bottom: 40px;">
+                            <img src="assets/img/Car/CarWithDetails.png" class="d-block w-100"
+                                alt="Lightning McQueen 2">
+                            <div class="carousel-caption d-none d-md-block">
+                            </div>
+                            <p class="text-center">Upon further evaluation, Vivian and I identified several design
+                                issues with the chassis enclosure. The enclosure obstructed access to the battery
+                                compartment and power button, and the car’s spoiler contained unnecessary geometry.
+                                However, we determined that these issues could be effectively addressed through
+                                additional modifications. To implement these adjustments, we utilized TinkerCad to
+                                create targeted extrusions. First, we modified the front window by converting it into a
+                                complete extrusion, allowing users to access and remove the batteries. Next, we added a
+                                rotated cube extrusion at the rear of the car to provide access to the power button.
+                                Finally, we introduced a cylindrical extrusion to eliminate the unnecessary geometry in
+                                the spoiler. These modifications successfully resolved the identified issues while
+                                maintaining the integrity of the overall design.</p>
+                        </div>
+                        <div class="carousel-item" style="padding-bottom: 40px;">
+                            <img src="assets/img/Car/CarWithHoles.png" class="d-block w-100" alt="Lightning McQueen 3">
+                            <div class="carousel-caption d-none d-md-block">
+                            </div>
+                            <p class="text-center">After measuring the chassis’ dimensions, we scaled our new enclosure
+                                to match it, with an additional 2mm as leeway, and then we began our print.</p>
+                        </div>
+                        <div class="carousel-item" style="padding-bottom: 40px;">
+                            <img src="assets/img/Car/FirstPrints.png" class="d-block w-100" alt="Lightning McQueen 4">
+                            <div class="carousel-caption d-none d-md-block">
+                            </div>
+                            <p class="text-center">The red model represents the initial print outcome. While it provided
+                                a solid starting point, it was not the correct size. The model was too short and lacked
+                                sufficient width, and the wheel holes did not extend over the body of the car as
+                                intended. To address these issues, Vivian and I adjusted the model’s dimensions based on
+                                the tailored box (yellow) we had created. We increased the model’s length and width by a
+                                few millimeters, ensuring that it was wider and slightly shorter than the yellow box.
+                                However, modifying the height presented a challenge, as any adjustments risked
+                                distorting the proportions of the wheel-hole overhangs.
+                            </p>
+                        </div>
+                        <div class="carousel-item" style="padding-bottom: 40px;">
+                            <img src="assets/img/Car/Image5.png" class="d-block w-100" alt="Lightning McQueen 5">
+                            <div class="carousel-caption d-none d-md-block">
+                            </div>
+                            <p class="text-center">After several iterations and careful adjustments, Vivian and I
+                                decided to scale the height of the model and incorporate cylindrical extrusions using
+                                TinkerCad. Initially, the design appeared unrefined due to an overhanging section of
+                                excess material. To address this issue, we added a 2mm-wide semicircle to each
+                                overhanging section, effectively minimizing its visibility.
+                                Satisfied with the revised design, we proceeded with the standard preparation process.
+                                We inverted the model, generated the necessary support structures, and initiated the
+                                second iteration of the Lightning McQueen print.
+                            </p>
+                        </div>
+                        <div class="carousel-item" style="padding-bottom: 40px;">
+                            <img src="assets/img/Car/Image6.png" class="d-block w-100" alt="Lightning McQueen 6">
+                            <p class="text-center">While the width and height of the second print were accurate, the
+                                length fell slightly short of the intended dimensions. Upon further analysis, we
+                                determined that the printed model’s actual length was shorter than the dimensions
+                                specified in the computer model. This discrepancy was likely due to the endpoints being
+                                positioned at the spoiler. To correct this issue, we established a new target length
+                                based on precise measurements. Using a digital caliper, we measured the actual length of
+                                the tailored box (109.71 mm), the intended input length for the second print (108.54
+                                mm), and the actual length of the second print (106.48 mm). We then calculated the
+                                adjusted input length using the following equation:
+                                New Input Length=109.71 mm+108.54 mm−106.48 mm=111.77 mm
+                                This revised length was used as the new input dimension for the next iteration of the
+                                print.
+
+                            </p>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
         </section>
     </div>
     <!-- Bootstrap core JS-->
