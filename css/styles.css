@@ -85,6 +85,14 @@
   box-sizing: border-box;
 }
 
+/* Change the color of the carousel arrows to black */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+  background-size: 100%; /* Ensure the icon fills the container */
+  border-radius: 50%; /* Optional: make the arrows circular */
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
