@@ -78,6 +78,7 @@
   --bs-link-hover-color: #115b39;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
+  --primary-green: #198754; /* Define the color variable */
 }
 
 *,
@@ -100,6 +101,7 @@
 body.dark-mode {
   background-color: #212529;
   color: white;
+  --primary-green: #198754; /* Keep the same color in dark mode */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -110,15 +112,15 @@ body.dark-mode {
   }
 }
 
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4,
-body.dark-mode h5,
-body.dark-mode h6,
-body.dark-mode .text-primary {
-  color: white !important;
-  /* Ensure all headers and gray text turn white */
+
+/* Ensure green text stays green in dark mode */
+body.dark-mode .text-success {
+    color: #28a745 !important; /* Bootstrap's default green color */
+}
+
+/* Example for inline styles or specific elements */
+body.dark-mode .custom-green {
+    color: #28a745 !important; /* Replace with your specific green color */
 }
 
 body.dark-mode .subheading {
@@ -148,17 +150,35 @@ body.dark-mode .btn {
   }
 }
 
+/* Default to light mode */
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
-  color: var(--bs-body-color);
+  color: #343A40; /* Dark gray for light mode */
   text-align: var(--bs-body-text-align);
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Default (Light Mode) */
+h1 {
+  color: #343A40;
+}
+
+/* Dark Mode */
+.dark-mode header {
+  color: #FFFFFF;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #FFFFFF; /* White for dark mode */
+  }
 }
 
 hr {
@@ -186,8 +206,29 @@ h1,
   font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   line-height: 1.2;
-  color: #343a40;
+  color: #343a40; /* Default header text color */
 }
+
+/* Default styles for light mode */
+h1, h2, h3, h4, h5, h6 {
+  color: #343A40; /* Default header text color */
+}
+
+.text-green {
+  color: #198754; /* Green text remains unchanged */
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4{
+  color: #FFFFFF; /* White for dark mode */
+}
+
+/* Dark mode styles */
+  .text-green {
+    color: #198754; /* Ensure green text stays the same */
+  }
 
 h1,
 .h1 {
