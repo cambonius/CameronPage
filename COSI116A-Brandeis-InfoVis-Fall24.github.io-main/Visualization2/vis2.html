@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Deaths by Cause (Zooming and Panning)</title>
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+    <div class="vis-holder">
+        <h1 id="main-title">Worldwide Deaths by Cause</h1>
+        <div id="map"></div>
+    </div>
+
+    <div id="year-container">
+        <label for="year">Year: |</label>
+        <select id="year"></select>
+    </div>
+    <div id="cause-container">
+        <label for="cause">Cause of Death:</label>
+        <select id="cause"></select>
+    </div>
+    <div id="color-container">
+        <label for="color">Color:</label>
+        <input type="color" id="color" value="#4292c6">
+    </div>
+    <div id="legend-container"></div>
+    
+
+    <script src="../lib/d3.v4/d3.v4.js"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+    <script src="../Visualization2/worldmap2.js"></script>
+    <script src="../Navbar/loadnavbar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,479 @@
+/* General formatting. Kaisei Decol font is used for banner tabs, and raleway is for most writing on page. inter is used for bar charts. */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
+
+
+iframe {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body {
+	padding: 0 10px;
+	font: 18px/1.5 -apple-system, BlinkMacSystemFont, "avenir next", avenir, "Segoe UI", "lucida grande", "helvetica neue", helvetica, "Fira Sans", roboto, noto, "Droid Sans", cantarell, oxygen, ubuntu, "franklin gothic medium", "century gothic", "Liberation Sans",
+		sans-serif;
+	color: #fff;
+
+	/* Background color */
+	background-image: url('Images/Background.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+body a{
+	color:#3577a2;
+}
+
+body a:hover{
+	color: #a6d6f3;
+}
+
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+html {
+	/* SCROLLBAR STYLING (because why not?)*/
+    scrollbar-width:auto; /* Width of the scrollbar */
+    scrollbar-color: #484a49 #111111; /* Color of the scrollbar thumb and track */
+}
+
+
+/* Title */
+#main-title {
+	font-family: 'Raleway', sans-serif;
+	font-size: 2.5em;
+	text-align: center;
+	color: white;
+	text-decoration: underline;
+	margin-top: 20px;
+	font-weight: 100;
+}
+
+
+/* NAVBAR */
+.tabs a {
+	color: grey;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.tabs a:hover {
+	color: #fff;
+}
+
+
+nav {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+	z-index: 1000; /* Ensure the navbar is on top */
+}
+
+.tabs {
+	font-family: 'Kaisei Decol', sans-serif;
+	list-style-type: none;
+	margin: 2%;
+	padding: 0;
+	display: flex;
+	position: absolute;
+	top: 10px;
+	right: 150px;
+	z-index: 1000;
+	font-size: 20px;
+	margin-right: 10%;
+	display: absolute;
+}
+
+
+.tab {
+	margin: 0 10px;
+	cursor: pointer;
+	padding: 10px;
+	/* text-decoration: underline solid transparent; */
+	color: grey;
+	transition: color 0.3s ease;
+
+}
+
+.tab:hover {
+	color: white;
+}
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .tabs {
+		font-size: smaller;
+		display: block;
+		position: static;
+        /* position: static;
+        display: block;
+        text-align: center;
+        margin: 0;
+        padding: 0; */
+    }
+
+    .tab {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+.logo {
+	top: 2%;
+	left: 2%;
+	display: flex;
+	padding: 0;
+	z-index: 1000;
+	margin-left: 10%;
+}
+
+.logo:hover {
+	cursor: pointer;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-menu {
+	display: none;
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #333;
+	list-style: none;
+	padding: 0;
+	margin: 2px;
+	border: 1px solid #444;
+	z-index: 10;
+	min-width: 200px;
+}
+
+.dropdown-menu li {
+	padding: 8px 16px;
+	text-align: center;
+}
+
+.dropdown-menu li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.dropdown:hover .dropdown-menu {
+	display: block;
+}
+
+.dropdown-menu li:hover {
+	background-color: #555;
+}
+
+.dropdown-menu li div {
+	width: 125px;
+	height: 50px;
+	cursor: pointer;
+	color: #fff;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+.dropdown-menu li div:hover {
+	background-color: #555;
+}
+
+.dropdown:hover .dropdown-menu {
+	display: block;
+}
+
+
+/* HEADERS & TEXT */
+h1 {
+	text-align: center;
+	/* Centers the text horizontally */
+	margin-top: 20px;
+	/* Optional: Adjusts spacing from the top */
+	font-family: 'Kaisei Decol', sans-serif;
+	/* Optional: Ensures consistent styling */
+}
+
+h2,
+h3 {
+	line-height: 1.2;
+	/* Font adjusted with help from https://www.w3schools.com/css/css3_fonts.asp 8*/
+	font-family: 'Kaisei Decol', sans-serif;
+	color: #fff;
+}
+
+/* Your text should be in a nice narrow column */
+.content-column {
+	max-width: 650px;
+	margin: 40px auto;
+}
+
+.vis-holder {
+	width: 100vw;
+	/* Use the full viewport width */
+	height: 100vh;
+	/* Use the full viewport height */
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	/* Prevent scrollbars */
+}
+
+
+/* MAP */
+#map {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* Map colors (Initially w/o data)*/
+	fill: #ffffff;
+	stroke: #333;
+
+}
+
+#map path {
+	cursor: pointer;
+}
+
+.map-holder {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+}
+
+.tooltip {
+	position: absolute;
+	text-align: center;
+	padding: 8px;
+	font: 12px sans-serif;
+	background: rgb(0, 0, 0);
+	border-radius: 8px;
+	pointer-events: none;
+}
+
+
+.dropdown-container {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 10px;
+	border-radius: 5px;
+	color: white;
+	z-index: 1000;
+}
+
+#year-container {
+	position: absolute;
+	top: 15%;
+	left: 30%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+#cause-container {
+	position: absolute;
+	top: 15%;
+	left: 80%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+
+/* VIS 2 STYLE */
+#year-container,
+#cause-container {
+	font-family: 'Kaisei Decol', sans-serif;
+	font-size: 16px;
+	color: white;
+	background-color: rgba(27, 31, 38, 0.72);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+	padding: 10px;
+	border-radius: 5px;
+}
+
+#year-container select,
+#cause-container select {
+	font-family: 'Kaisei Decol', sans-serif;
+	background-color: rgba(27, 31, 38, 0.72);
+	color: white;
+	border: none;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+#color-container {
+	position: absolute;
+	top: 20%;
+	left: 30%;
+	transform: translate(-50%, -50%);
+	font-family: 'Kaisei Decol', sans-serif;
+	font-size: 16px;
+	color: white;
+	background-color: rgba(27, 31, 38, 0.72);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+	padding: 10px;
+	border-radius: 5px;
+}
+
+#color-container input {
+	margin-left: 10px;
+	border: none;
+	border-radius: 5px;
+}
+
+
+select {
+	margin-left: 10px;
+	background-color: #222;
+	color: white;
+	border: none;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+/* LEGEND */
+#legend-container {
+	position: absolute;
+	bottom: 5%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 500px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-family: 'Kaisei Decol', sans-serif;
+	color: white;
+}
+
+.legend-bar {
+	width: 80%;
+	height: 15px;
+	background: linear-gradient(to right, #ffffff, #4292c6);
+	/* Adjust colors dynamically in JavaScript */
+	margin: 0 10px;
+}
+
+.legend-label {
+	font-size: 14px;
+	text-align: center;
+}
+
+.tooltip {
+	font-size: 14px;
+	font-family: Arial, sans-serif;
+	line-height: 1.4;
+	z-index: 10;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */
+#forkongithub a {
+	background: #00F;
+	color: #fff;
+	text-decoration: none;
+	font-family: arial, sans-serif;
+	text-align: center;
+	font-weight: bold;
+	padding: 5px 40px;
+	font-size: 1rem;
+	line-height: 1.4rem;
+	position: relative;
+	transition: 0.5s;
+}
+
+#forkongithub a:hover {
+	background: #118;
+	color: #fff;
+}
+
+#forkongithub a::before,
+#forkongithub a::after {
+	content: "";
+	width: 100%;
+	display: block;
+	position: absolute;
+	top: 1px;
+	left: 0;
+	height: 1px;
+	background: #fff;
+}
+
+#forkongithub a::after {
+	bottom: 1px;
+	top: auto;
+}
+
+#forkongithub {
+	position: fixed;
+	display: block;
+	top: 0;
+	right: 0;
+	width: 200px;
+	overflow: hidden;
+	height: 200px;
+	z-index: 999;
+}
+
+#forkongithub a {
+	background: #00F;
+	color: #fff;
+	text-decoration: none;
+	font-family: arial, sans-serif;
+	text-align: center;
+	font-weight: bold;
+	padding: 5px 40px;
+	font-size: 1rem;
+	line-height: 1.4rem;
+	position: absolute;
+	top: 50px;
+	right: -50px;
+	transform: rotate(45deg);
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+	transition: 0.5s;
+}
+
+#forkongithub a:hover {
+	background: #118;
+}
+
+#forkongithub a::before,
+#forkongithub a::after {
+	content: "";
+	width: 100%;
+	display: block;
+	position: absolute;
+	top: 1px;
+	left: 0;
+	height: 1px;
+	background: #fff;
+}
+
+#forkongithub a::after {
+	bottom: 1px;
+	top: auto;
+}
+
+@media screen and (min-width: 1000px) {
+	#forkongithub {
+		display: block;
+	}
+}
+

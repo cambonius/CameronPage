@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Metadata -->
+
+<head>
+
+  <!-- Source: https://www.w3schools.com/html/html_images_background.asp -->
+  <meta charset="utf-8">
+  <!-- Font -->
+  <!-- commented this out for now. we want to use this font in some places throughout the site <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">-->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Script -->
+  <script src="js/script.js" defer></script>
+
+  <!-- Title -->
+  <title>Project Team 13: Topic, COSI 116A F23</title>
+
+  <!-- CSS Styling -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="SVG_logo/BLACK.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="SVG_logo/BLACK.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="SVG_logo/BLACK.svg">
+  <link rel="shortcut icon" href="favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<!-- Main page content -->
+<nav>
+  <a data-tab-target="#about" class="logo">
+    <img src="SVG_logo/WHITE.svg" alt="Logo" width="125" height="125">
+  </a>
+  <ul class="tabs">
+    <li class="tab active">
+      <a href="index.html">ABOUT</a>
+    </li>
+    <li class="tab dropdown">
+      VISUALIZATIONS
+      <ul class="dropdown-menu">
+        <li><a href="Visualization1/vis1.html">Brush & Link</a></li>
+        <li><a href="Visualization2/vis2.html">Deaths by Cause (Zooming and Panning)</a></li>
+        <li><a href="Visualization3/vis3.html">Individual Country Facts</a></li>
+      </ul>
+    </li>
+
+    <li class="tab">
+      <a href="TeamPage/teampage.html">TEAM</a>
+    </li>
+  </ul>
+</nav>
+
+
+<body>
+  <div class="tab-content">
+    <div id="about" data-tab-content class="active">
+      <div class="content-column">
+
+        <h1>Project Team 13: Topic: Global Patterns in Alcohol and Mortality, COSI 116A F24</h1>
+
+        <p><strong>Mackenzie Chung</strong>, <strong>Debbie Engelberg</strong>, <strong>Noam
+            Reiner</strong>, <strong>Cameron Sherman</strong></p>
+
+        <p>Project-long Course Project as part of COSI 116A: Information Visualization</a>, taught by <a
+            href="https://cs.brandeis.edu/~dylan/">Prof. Dylan Cashman</a>, <a href="https://cs.brandeis.edu/">Brandeis
+            University</a>.</p>
+
+        <h1>Motivation</h1>
+
+        <p>Alcohol consumption is a significant global health concern, often cited as a leading risk factor for
+          numerous medical conditions and social issues. From a young age, we are taught about the dangers of
+          excessive drinking and its potential to lead to addiction, liver disease, mental health disorders, and even
+          premature death. Yet, the true scope of its impact on global mortality and its comparison to other leading
+          causes of death is often less understood. This gap in understanding inspired our team to delve deeper into
+          the correlation between alcohol consumption and death rates worldwide.
+
+        </p>
+
+        <p>We set out to answer critical questions: How does alcohol-related mortality compare to other common
+          causes of death? Is the narrative around alcohol consumption's dangers as dire as parents and educators
+          suggest? Additionally, how do these risks vary across different countries and over time? To address these
+          questions, we created a series of visualizations aimed at individuals of all backgrounds who are
+          curious about the broader effects of alcohol consumption.
+
+        </p>
+
+        <p>
+          Our visualizations allow users to explore data on alcohol consumption, death rates, birth rates, and causes
+          of death interactively. Users can observe patterns across different years and regions, enabling them to draw
+          informed conclusions. Through this experience, we hope to provide valuable insights into the complex and
+          often overlooked impact of alcohol on global health.
+        </p>
+
+        
+        </p>
+
+
+        <!-- Your writeup goes here -->
+        <div class="content-column">
+
+          <h1>Demo Video</h1>
+
+          <p>The video below walks through the process of creating our project: From planning out what issues we aim to research and tackle,
+            to gathering the data and drafting up sketches for our final designs. It also shows the final product of our visualizations and how users can interact with them.
+            <br> <em>**The actual demonstration for each visualization starts at 5:16.</em>
+          </p>
+              <iframe width="600" height="400" src="https://www.youtube.com/embed/J_1BuFKUVuw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+          <h1>Explanation of Visualizations</h1>
+
+          <p><em>There are 3 different visualizations that users can explore which are all found under the drop-down
+              menu for "Visualizations:</em></p>
+
+          <p>
+          <h3>Brushing & Linking </h3>
+            In this visualization, users can observe how alcohol consumption rate (per capita) compares to the number
+            of deaths documented in each country through a slider and two graphs below: A linchart that shows the
+            deathrate
+            across the years, and a bar graph that shows the total alcohol consumption rate across the years. Points
+            that are highlighted
+            in the linechart will be reflected in the bargraph and vice versa. Users can play the slider to which it
+            will go through
+            the data for all the available years (2000 to 2019) and the graphs below will highlight each point and bar
+            for the current year
+            it is being iterated through. Users can also manually drag the slider to compare with specific graphs.
+            <ul><em><a href="Visualization1/vis1.html">View Visualization 1</a></em></ul>
+          </p>
+          <p>
+          <h3>Causes of Death Across Countries with Zooming and Panning </h3>
+            In this visualization, users can observe how an assortment of different causes of death compare across the
+            world per year.
+            They can do this by selecting a year in the "Year:" dropodown menu between 1990 and 2019, one of thirty-one
+            different causes
+            of death from the "Cause of Death:" dropdown, and can change between any RGB color value to display
+            countries in the selected
+            color. The closer the country is to the selected rgb color, the more deaths it has in the selected year by
+            the selected cause.
+            Below the map is a legend container that displays the amount of deaths from the country with the lowest
+            amount of deaths by
+            the selected cause in the selected year (almost always zero), to the country with the highest amount of
+            recorded deaths the
+            selected cause in the selected year. Users can also zoom in and out and move/pan around the map if they want
+            to hover over a
+            country that would typically be hard to hover over due to its small size. When a user hovers over a country,
+            the country's
+            name is displayed alongside the amount of deaths by the selected cause for the selected year.
+            <ul><em><a href="Visualization2/vis2.html">View Visualization 2</a></em></ul>
+          </p>
+
+          <p>
+          <h3>Individual Country Facts and Data</h3>
+          In this visualization, users can select a country and year from two different dropdown menus to display
+            information based on their selected data type. When a country is selected, that country is given an orange
+            color
+            on the map, and then an enlarged version of the colored-in country is displayed below the map. Based on the
+            year
+            and data type they selected, a fact about their selected information is displayed. For example, if a user
+            were to
+            select Austria for the country, 2019 for the year, and Alcohol Consumption for the data type, they would see
+            a
+            message below the highlighted country in a black box that says "In 2019, alcohol, recorded per capita (15+
+            years) consumption (in liters of pure alcohol) was 11.9".
+            <ul><em><a href="Visualization3/vis3.html">View Visualization 3</a></em></ul>
+          </p>
+
+          <h1>Data Analysis and Cleaning</h1>
+
+          <p>For the data cleaning we used Python's Panadas library. We combined four datasets: one on causes of death
+            and three on alcohol consumption. For the cause of death data, we cleaned unnecessary columns, filled null
+            cells, added a total count column, and standardized data types. The alcohol consumption datasets were reformatted
+            and aligned, ensuring consistency for merging. After integrating the datasets by year and country. For interaction
+            with the Json of the map, we added alpha-2 countries codes.
+  
+            <p>Link to data cleaning: <a href="https://colab.research.google.com/drive/1CXzDcB9EuiBlps0GL37_qgG_ykGpNrow?usp=sharing">Google Colab</a></p>
+
+          <h1>Task Analysis</h1>
+
+          <p>Here are the following tasks that our team prioritized:</p>
+          <ol>
+            <li>Comparing the alcohol consumption rates to the death rates across different years and countries.</li>
+                <ul>
+                  <li>We tried incorportating this exploration in our brushing and linking, as seen with our first visualization where the user can 
+                    highlight certain point on either graphs and have it reflected in the other for easier observation.
+                  </li>
+                  <li>
+                    The goal was for the user to be able to explore and come up with their own conclusion of the correlation they noticed in the visualization while making 
+                    it an interactive and engaging experience for users of all backgrounds.
+                  </li>
+                </ul>
+              <li>Observing how different years impact the results of the data collected.</li>
+                <ul>
+                    <li>Our goal was to include a interactive button or slider that allows the user to explore the data for different years in an engaging and user-friendly way. 
+                      This was implemented in our brushing and linking visualization where the user can play the slider to go through the data for all the available years (2000 to 2019)
+                      and the graphs below will highlight each point and bar for the current year it is being iterated through.
+                    </li>
+                    <li>
+                      This was also seen with visualization 2 for observing the differences for causes of death across the years, and in visualization 3 for comparing how the chosen year
+                      affects the comparison between the chosen country and the world data results.
+                    </li>
+                </ul>
+              <li>Observing how different countries vary in terms of death rates, alcohol consumptions, and leading causes of deaths.</li>
+                <ul>
+                    <li>
+                      Each visualization included a world map where, when hovered over, will display some form of data. This was to allow the user to explore the data for different countries
+                      and the heatmap of the world map makes it easier and more visually engaging for the user to see the differences between countries.
+                    </li>
+                </ul>
+          </ol>
+        
+
+          <h1>Design Process</h1>
+
+          <p>Each team member drafted 2 ideas to contribute, and as a team, we went through all our ideas and chose
+              our top 3 visualizations. After drawing them out more precisely, we decided to incorporate all 3 options
+              into our final project. While working on the visualizations, we've encountered a lot of difficulties with
+              using
+              the D3 library, but eventually figured out how to code out bits and parts of our visualizations.
+          </p>
+
+          <p><em>Visualization 1: Brushing & Linking</em></p>
+          <img src="Images/vis1Draft.png" alt="Brushing & Linking Draft" style="width: 300px; object-fit: cover;">
+          <img src="Images/vis1Final.png" alt="Brushing & Linking Final" style="width: 300px; object-fit: cover;">
+
+          <p><em>Visualization 2: Deaths by Cause with Zooming & Panning</em></p>
+          <img src="Images/vis2Draft.png" alt="Brushing & Linking Draft" style="width: 300px; object-fit: cover;">
+          <img src="Images/vis2Final.png" alt="Brushing & Linking Final" style="width: 300px; object-fit: cover;">
+
+          <p><em>Visualization 3: Individual Country Facts</em></p>
+          <img src="Images/vis3Draft.png" alt="Brushing & Linking Draft" style="width: 300px; object-fit: cover;">
+          <img src="Images/vis3Final.png" alt="Brushing & Linking Final" style="width: 300px; object-fit: cover;">
+
+
+          <h1>Conclusion</h1>
+
+          <p>At the end of our project, we were able to somewhat recreate our top 3 visualization sketches and successfully connected
+            the datasets to our maps and graphs. For visualization 1 (Brushing & Linking), all the main components were implemented, including the timeline slider,
+            the line chart, and the bar graph -- However, the style for the slider and legend was a bit off from the original sketch. It also got a bit messy when 
+            figuring out how to connected the slider to the map, line chart, and bar graph. Visualization 2 (Causes of Death Across Countries with Zooming and Panning) 
+            was also implemented with the map, dropdowns, and legend, and closley matched the original sketch. The programmer for visualization 2 also added the ability
+            to zoom in and out, making the map more interactive. But although interactive, the layout of the page can vary depending on
+            the size of the screen which may lead to inconsistencies with objects overlapping. In visualization 3, it also uses the map and dropdowns for the user to 
+            select a country and year, and displayed the data below the map. And similar to visualization 3, the layout of the page can vary depending on the size of the screen or browser (as noticed by one of our team member).
+            Our UI was also close to how we had envisioned in our sketches, but we also realized that the background can make reading the map a bit more challenging so we'll take that into acount for future projects.
+            Overall, the created project was a big sucess, but there are definitely still areas for improvement.
+          </p>
+
+
+          <h1>Acknowledgments</h1>
+
+          <ul>
+            <li><a href="https://d3js.org/">D3: Data-Driven Documents</a> by Mike Bostock.</li>
+            <li><a href="https://bost.ocks.org/mike/map/">Let's Make a Map</a> by Mike Bostock</li>
+            <li><a href="https://codepo8.github.io/css-fork-on-github-ribbon/#">Pure CSS responsive "Fork me on GitHub"
+                ribbon</a> by Chris Heilmann.</li>
+            <li><a href="https://github.com/aiberk/infoVizGroup8">infoVizGroup8</a> by TA Aby and Team 8 (From 2023)
+            </li>
+            <li>COSI 116A - Homework 4 - Brushing and Linking</li>
+            <li><a href="https://geojson-maps.kyd.au/?utm_source=self&utm_medium=redirect">Downloadable GeoJSON</a></li>
+            <li><a href="https://apps.who.int/gho/data/view.main.52395"> Dataset for Alcohol Consumption Rate (Liters per Capita)</a> by The World Health Organization</li>
+            <li><a href="https://www.kaggle.com/datasets/iamsouravbanerjee/cause-of-deaths-around-the-world"> Dataset for Causes of Deathes Around the World</a> by Sourav Banerjee</li>
+            <li><a href="https://www.kaggle.com/datasets/shreyasur965/births-and-deaths">Dataset for Global Births and Deaths Projections</a> by Shreya Sur965</li>
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- Update this with your GitHub repo URL -->
+    <span id="forkongithub"><a href="https://github.com/DeborahEngelberg/Final_DataVis_Project.git">Fork me on
+        GitHub</a></span>
+
+
+    <!-- Scripts at the end avoid need for dealing with async, defer, or onload event handlers -->
+    <script src="lib/d3.v4/d3.v4.js"></script>
+</body>
+
+</html>
