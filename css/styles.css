@@ -43,7 +43,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 25, 135, 84;
+  --bs-primary-rgb: 0, 0, 0;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -12778,6 +12778,7 @@ p.lead {
   font-weight: 800;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
+  color: black;
 }
 
 #sideNav .navbar-toggler:focus {
@@ -12941,4 +12942,66 @@ input:checked+.slider {
 
 input:checked+.slider:before {
   transform: translateX(26px);
+}
+
+body {
+    background-image: url('1681.jpg');
+    background-size: contain;         /* Makes the image cover the whole background */
+    background-repeat: repeat;   /* Prevents tiling */
+    background-position: center;    /* Centers the image */
+}
+
+.center {
+  display: block;
+  margin-left: 34%;
+  margin-right: auto;
+  margin-top: 42%;
+  width: 100%;
+}
+
+#mainNav {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+#mainNav .navbar-nav {
+    gap: 32px;
+}
+#mainNav .nav-link {
+    font-size: 1.25rem;
+    font-family: 'Open Sans', sans-serif;
+    color: black !important;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.slide-up-text {
+    position: absolute;
+    left: 50%;
+    top: 25%; /* Place it about 25% from the top of the title section */
+    transform: translate(-50%, 100%);
+    opacity: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #222;
+    animation: slideUpFadeIn 1.2s ease-out 0.5s forwards;
+    z-index: 2;
+    width: max-content;
+    max-width: 90vw;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .slide-up-text {
+        font-size: 1.5rem;
+        top: 18%;
+        padding: 0.4em 0.8em;
+    }
+}
+
+@keyframes slideUpFadeIn {
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
 }

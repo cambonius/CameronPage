@@ -16,47 +16,67 @@
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-    <!-- Link COSI 116A CSS -->
-    <link href="COSI116A-Brandeis-InfoVis-Fall24.github.io-main/" rel="stylesheet">
 </head>
 
 <body id="page-top">
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-block d-lg-none">Cameron Sherman</span>
-            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2"
-                    src="assets/img/profile.jpg" alt="..." /></span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
-                class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#engr11a">ENGR11a Projects</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#other-projects">Other Projects</a>
-                </li>
-            </ul>
+    <!-- Replace your current nav with this horizontal top navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav"
+        style="background: transparent !important; box-shadow: none;">
+        <div class="container-fluid justify-content-center">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top" style="margin-right: 30px;">
+                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="..."
+                    style="width:40px; height:40px; margin-right:10px;" />
+                Cameron Sherman
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#title">Title</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#engr11a">ENGR11a Projects</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#other-projects">Other Projects</a>
+                    </li>
+                </ul>
+                <!-- Dark Mode Toggle Button -->
+                <label class="switch" style="margin-left: 20px;">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
         </div>
-        <!-- Dark Mode Toggle Button -->
-        <label class="switch" style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
-            <input type="checkbox" id="darkModeToggle">
-            <span class="slider round"></span>
-        </label>
+    </nav>
+    <!-- Dark Mode Toggle Button -->
+    <label class="switch" style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider round"></span>
+    </label>
     </nav>
     <!-- Page Content-->
     <div class="container-fluid p-0">
+        <!-- Title Section -->
+        <section class="resume-section" id="title">
+            <div style="position: relative; min-height: 250px;">
+                <img src="assets/img/tree.png" alt="tree" class="center" />
+                <div class="slide-up-text" id="slideUpText">
+                    Hi, I'm Cameron.
+                </div>
+            </div>
+        </section>
         <!-- About-->
         <section class="resume-section" id="about">
             <div class="resume-section-content">
-                <h1 class="mb-0">
+                <h1 class="mb-0" style="font-family: Arial, Helvetica, sans-serif; text-transform: none;">
                     Cameron
-                    <span class="text-primary">Sherman</span>
+                    <span class="text-primary"
+                        style="font-family: Arial, Helvetica, sans-serif; text-transform: none; color: black">Sherman</span>
                 </h1>
                 <div class="subheading mb-5">
                     415 South Street · Waltham, MA 02453
