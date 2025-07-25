@@ -13083,7 +13083,7 @@ body {
     padding-top: 3.375rem;
     color: #6c757d;
     background-image:
-        url('assets/Tree.png'),   
+        url('assets/img/Tree.png'),   
         url('assets/img/BackgroundFlipped.png'),        /* Alternating flipped */
         url('assets/img/Background.png');               /* First background */
     background-position:
@@ -13105,7 +13105,7 @@ body.dark-mode {
     padding-top: 3.375rem;
     color: #6c757d;
     background-image:
-        url('assets/TreeDark.png'),           /* The tree, bottom of first section */
+        url('assets/img/TreeDark.png'),           /* The tree, bottom of first section */
         url('assets/img/BackgroundFlippedDark.png'),        /* Alternating flipped */
         url('assets/img/BackgroundDark.png');               /* First background */
     background-position:
