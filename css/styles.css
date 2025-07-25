@@ -87,6 +87,7 @@
   box-sizing: border-box;
 }
 
+
 /* Change the color of the carousel arrows to black */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -12725,10 +12726,6 @@ fieldset:disabled .btn {
   }
 }
 
-body {
-  padding-top: 3.375rem;
-  color: #6c757d;
-}
 
 @media (min-width: 992px) {
   body {
@@ -12944,27 +12941,20 @@ input:checked+.slider:before {
   transform: translateX(26px);
 }
 
-body {
-    background-image:
-        url('assets/img/Background.png'),
-        url('assets/img/BackgroundFlipped.png');
-    background-position:
-        0 0,
-        100px 0;
-    background-size:
-        100px auto,
-        100px auto;
-    background-repeat: repeat-x, repeat-x;
-    /* ... */
+html, body {
+    height: 100%;
+    min-height: 100%;
 }
 
 .center {
   display: block;
-  margin-left: 34%;
+  margin-left: auto;
   margin-right: auto;
-  margin-top: 42%;
-  width: 100%;
+  margin-top: 42%; /* adjust or remove as needed */
+  width: auto;     /* or set a max-width if needed */
+  max-width: 400px; /* optional: set a max width for the tree */
 }
+
 
 #mainNav {
     background: transparent !important;
@@ -12985,7 +12975,6 @@ body {
 .slide-up-text {
     position: absolute;
     left: 50%;
-    top: 25%; /* Place it about 25% from the top of the title section */
     transform: translate(-50%, 100%);
     opacity: 0;
     font-size: 2.5rem;
@@ -13011,4 +13000,26 @@ body {
         transform: translateX(-50%) translateY(0);
         opacity: 1;
     }
+}
+
+body {
+    padding-top: 3.375rem;
+    color: #6c757d;
+    background-image:
+        url('../assets/img/Tree.png'),           /* The tree, bottom of first section */
+        url('../assets/img/BackgroundFlipped.png'),        /* Alternating flipped */
+        url('../assets/img/Background.png');               /* First background */
+    background-position:
+        center bottom,     /* Tree: bottom center */
+        center 1080px,     /* Flipped: starts after first section */
+        center 0;          /* First background: top center */
+    background-size:
+        700px auto,        /* Tree: adjust width as needed */
+        1920px 1080px,     /* Flipped: full section */
+        1920px 1080px;     /* First background: full section */
+    background-repeat:
+        no-repeat,         /* Tree: show only once */
+        repeat-y,          /* Flipped: repeat vertically */
+        repeat-y;         /* First background: show only once */
+    background-color: transparent;
 }
