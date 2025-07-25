@@ -113,6 +113,10 @@ body.dark-mode {
   }
 }
 
+.dark-mode .text-primary {
+    color: #dbdbdb !important;
+}
+
 
 /* Ensure green text stays green in dark mode */
 body.dark-mode .text-success {
@@ -135,8 +139,8 @@ body.dark-mode a {
 }
 
 body.dark-mode .navbar {
-  background-color: #343a40;
-  border-color: #454d55;
+  background-color: #dbdbdb;
+  border-color: #dbdbdb;
 }
 
 body.dark-mode .btn {
@@ -254,6 +258,8 @@ h2,
   h2,
   .h2 {
     font-size: 3.5rem;
+    text-align: left;
+    margin-left: -15rem;
   }
 }
 
@@ -293,9 +299,11 @@ h6,
   font-size: 1rem;
 }
 
-p {
+p,
+#education li {
   margin-top: 0;
-  margin-bottom: 1rem;
+  text-align: left;
+  margin-left: -15rem;
 }
 
 abbr[title] {
@@ -4259,6 +4267,12 @@ fieldset:disabled .btn {
   list-style: none;
 }
 
+body.dark-mode.nav {
+  --bs-nav-link-color: #dee2e6;
+  --bs-nav-link-hover-color: #fff;
+  --bs-nav-link-disabled-color: #adb5bd;
+}
+
 .nav-link {
   display: block;
   padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
@@ -4446,6 +4460,8 @@ fieldset:disabled .btn {
   --bs-nav-link-hover-color: var(--bs-navbar-hover-color);
   --bs-nav-link-disabled-color: var(--bs-navbar-disabled-color);
   display: flex;
+  justify-content: center;
+  width: 100%;
   flex-direction: column;
   padding-left: 0;
   margin-bottom: 0;
@@ -8755,6 +8771,8 @@ fieldset:disabled .btn {
 }
 
 .mb-0 {
+  text-align: left;
+  margin-left: -15rem;
   margin-bottom: 0 !important;
 }
 
@@ -8776,6 +8794,11 @@ fieldset:disabled .btn {
 
 .mb-5 {
   margin-bottom: 3rem !important;
+}
+
+.bio-text {
+  text-align: left;
+  margin-left: -15rem;
 }
 
 .mb-auto {
@@ -12764,6 +12787,8 @@ p.lead {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1.5rem;
+  text-align: left;
+  margin-left: -15rem;
 }
 
 #sideNav {
@@ -12775,7 +12800,7 @@ p.lead {
   font-weight: 800;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  color: black;
+  color: white;
 }
 
 #sideNav .navbar-toggler:focus {
@@ -12839,8 +12864,9 @@ p.lead {
   background-color: #495057;
   color: #fff;
   border-radius: 100%;
+  text-align: left;
   font-size: 1.5rem;
-  margin-right: 1.5rem;
+  margin-left: -9.5rem;
 }
 
 .social-icons .social-icon:last-child {
@@ -12852,6 +12878,7 @@ p.lead {
 }
 
 .dev-icons {
+  margin-left: -15rem;
   font-size: 3rem;
 }
 
@@ -12870,7 +12897,9 @@ section.resume-section .resume-section-content {
 }
 
 .resume-section #about .resume-section-content .lead {
-  margin-bottom: 2rem;
+    text-align: right;
+    margin-left: 0;
+    margin-right: auto;
 }
 
 .resume-section #about .social-icons {
@@ -12965,9 +12994,27 @@ html, body {
     gap: 32px;
 }
 #mainNav .nav-link {
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* Light mode styles (default) */
+.nav-link {
+  color: #000000; /* black or default color */
+}
+
+/* Dark mode override */
+body.dark-mode .nav-link {
+  color: #dbdbdb !important; /* light text for dark background */
+}
+
+#mainNav .nav-link.dark-mode {
     font-size: 1.25rem;
     font-family: 'Open Sans', sans-serif;
-    color: black !important;
+    color: white !important;
     letter-spacing: 1px;
     font-weight: 500;
 }
@@ -12975,9 +13022,10 @@ html, body {
 .slide-up-text {
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 100%);
+    top: 15%;
+    transform: translate(-50%, 200%);
     opacity: 0;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #222;
     animation: slideUpFadeIn 1.2s ease-out 0.5s forwards;
@@ -12985,6 +13033,31 @@ html, body {
     width: max-content;
     max-width: 90vw;
     text-align: center;
+}
+
+body.dark-mode .slide-up-text {
+  color: #dbdbdb; 
+}
+
+
+.slide-up-text-two {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, 100%);
+    opacity: 0;
+    font-size: 5.5rem;
+    font-weight: 600;
+    color: #222;
+    animation: slideUpFadeIn 2.0s ease-out 1.5s forwards;
+    z-index: 2;
+    width: max-content;
+    max-width: 90vw;
+    text-align: center;
+}
+
+body.dark-mode .slide-up-text-two {
+  color: #dbdbdb; 
 }
 
 @media (max-width: 768px) {
@@ -13002,6 +13075,10 @@ html, body {
     }
 }
 
+
+
+
+
 body {
     padding-top: 3.375rem;
     color: #6c757d;
@@ -13014,7 +13091,7 @@ body {
         center 1080px,     /* Flipped: starts after first section */
         center 0;          /* First background: top center */
     background-size:
-        700px auto,        /* Tree: adjust width as needed */
+        600px auto,        /* Tree: adjust width as needed */
         1920px 1080px,     /* Flipped: full section */
         1920px 1080px;     /* First background: full section */
     background-repeat:
@@ -13022,4 +13099,58 @@ body {
         repeat-y,          /* Flipped: repeat vertically */
         repeat-y;         /* First background: show only once */
     background-color: transparent;
+}
+
+body.dark-mode {
+    padding-top: 3.375rem;
+    color: #6c757d;
+    background-image:
+        url('../assets/img/TreeDark.png'),           /* The tree, bottom of first section */
+        url('../assets/img/BackgroundFlippedDark.png'),        /* Alternating flipped */
+        url('../assets/img/BackgroundDark.png');               /* First background */
+    background-position:
+        center bottom,     /* Tree: bottom center */
+        center 1080px,     /* Flipped: starts after first section */
+        center 0;          /* First background: top center */
+    background-size:
+        600px auto,        /* Tree: adjust width as needed */
+        1920px 1080px,     /* Flipped: full section */
+        1920px 1080px;     /* First background: full section */
+    background-repeat:
+        no-repeat,         /* Tree: show only once */
+        repeat-y,          /* Flipped: repeat vertically */
+        repeat-y;         /* First background: show only once */
+    background-color: transparent;
+}
+
+.cv-container {
+  text-align: left;
+  margin-left: -15rem;
+}
+
+.cv-heading {
+  text-align: center; 
+}
+
+.interest-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; /* Adjust spacing between logos */
+  flex-wrap: wrap; /* Wrap on smaller screens */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: -15rem;
+}
+
+.interest-logos img {
+  max-width: 150px;
+  width: 100%;
+}
+
+hr {
+  width: 75%; /* Or any fixed width like 600px */
+  margin: auto; /* Center horizontally */
+  border-top: 2px solid #ccc; /* Optional: make the line bolder or styled */
+  opacity: 0.5; /* Optional: adjust visibility */
 }
