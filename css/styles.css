@@ -12945,10 +12945,17 @@ input:checked+.slider:before {
 }
 
 body {
-    background-image: url('1681.jpg');
-    background-size: contain;         /* Makes the image cover the whole background */
-    background-repeat: repeat;   /* Prevents tiling */
-    background-position: center;    /* Centers the image */
+    background-image:
+        url('assets/img/Background.png'),
+        url('assets/img/BackgroundFlipped.png');
+    background-position:
+        0 0,
+        100px 0;
+    background-size:
+        100px auto,
+        100px auto;
+    background-repeat: repeat-x, repeat-x;
+    /* ... */
 }
 
 .center {
