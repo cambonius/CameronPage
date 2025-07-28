@@ -12797,8 +12797,8 @@ h1,
 }
 
 p.lead {
-  font-size: 1.15rem;
-  font-weight: 400;
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
 .subheading {
@@ -12906,8 +12906,8 @@ section.resume-section {
   align-items: center;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
 }
 
 section.resume-section .resume-section-content {
@@ -13115,6 +13115,16 @@ body.dark-mode .slide-up-text-two {
   text-align: center;
 }
 
+.name-wrapper {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20vh;
+  text-align: center;
+}
+
 
 body {
   padding-top: 3.375rem;
@@ -13250,4 +13260,5 @@ div.year {
 
 .about-image img {
   border-radius: 20%;
+  margin-left: -9.5rem;
 }
