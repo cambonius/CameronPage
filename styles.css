@@ -231,7 +231,6 @@ h1,
   font-weight: 700;
   line-height: 1.2;
   color: #343a40;
-  text-align: left;
   /* Default header text color */
 }
 
@@ -8654,8 +8653,8 @@ body.dark-mode.nav {
 .m-0 {
   margin: 0 !important;
   display: block;
-  width: calc(50% + 25rem); /* Matches your shifted layout */
-  margin-left: -15rem;
+  width: 80%;
+  margin: 2rem auto;
   border: none;
   border-top: 1.5px solid #7d7d7d;
   opacity: 1;
@@ -12814,7 +12813,7 @@ p.lead {
   font-weight: 500;
   font-size: 1.5rem;
   margin-left: -15rem;
-  text-align: left;
+
 }
 
 #sideNav {
@@ -12892,11 +12891,11 @@ p.lead {
   border-radius: 100%;
   text-align: left;
   font-size: 1.5rem;
-  margin-left: -9.5rem;
+  margin-left: -15rem;
 }
 
 .social-icons .social-icon:last-child {
-  margin-right: 0;
+  margin-left: -9.5rem;
 }
 
 .social-icons .social-icon:hover {
@@ -12904,7 +12903,6 @@ p.lead {
 }
 
 .dev-icons {
-  margin-left: -15rem;
   font-size: 3rem;
 }
 
@@ -12912,20 +12910,12 @@ p.lead {
 section.resume-section {
   display: flex;
   align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 2rem;
-  padding-bottom: 4rem;
 }
 
 section.resume-section .resume-section-content {
   width: 100%;
 }
 
-.resume-section #about .resume-section-content .lead {
-  margin-left: 0;
-  margin-right: auto;
-}
 
 .resume-section-content ul {
   padding-left: 0 !important;
@@ -12940,18 +12930,11 @@ section.resume-section .resume-section-content {
 }
 
 
+
+
 @media (min-width: 768px) {
   section.resume-section {
     min-height: 100vh;
-  }
-}
-
-@media (min-width: 992px) {
-  section.resume-section {
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
   }
 }
 
@@ -13136,13 +13119,12 @@ body.dark-mode .slide-up-text-two {
 
 body {
   padding-top: 3.375rem;
-  color: #6c757d;
   background-image:
     url('assets/img/Tree.png'),
     url('assets/img/BackgroundFlipped.png'),
     url('assets/img/Background.png');
   background-position:
-    center bottom,
+    center calc(100% + 70px),
     center top,
     center top;
   background-size:
@@ -13157,19 +13139,17 @@ body {
     scroll,
     fixed,
     fixed;
-  /* optional: fixed for parallax effect */
   background-color: transparent;
 }
 
 body.dark-mode {
   padding-top: 3.375rem;
-  color: #6c757d;
   background-image:
     url('assets/img/TreeDark.png'),
     url('assets/img/BackgroundFlippedDark.png'),
     url('assets/img/BackgroundDark.png');
   background-position:
-    center bottom,
+    center calc(100% + 70px),
     center top,
     center top;
   background-size:
@@ -13266,13 +13246,19 @@ div.year {
   color: #000;
 }
 
-.about-image img {
-  margin-left: -9.5rem;
-}
-
 .portrait-dark {
+  margin-left: -15rem;
   display: none;
 }
+
+.portrait-light {
+  max-width: 300px;
+  border-radius: 20%;
+  margin-left: -15rem;
+  border: 3px solid rgba(0, 0, 0, 1);
+  display: block;
+}
+
 
 body.dark-mode .portrait-light {
   display: none;
@@ -13280,4 +13266,32 @@ body.dark-mode .portrait-light {
 
 body.dark-mode .portrait-dark {
   display: block;
+}
+
+/* Horizontally center the About section */
+section#about {
+  justify-content: center;
+}
+
+/* put this at the bottom of styles.css */
+#about li {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  text-align: left !important;
+}
+
+.about-image {
+  position: relative;
+}
+
+.about-image .me-image {
+  position: relative; 
+  z-index: 2;
+}
+
+.about-image .dog-image {
+  position: absolute;
+  bottom: 0;             
+  left: -5rem;         
+  z-index: 1;          
 }
