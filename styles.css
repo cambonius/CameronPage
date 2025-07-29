@@ -10548,7 +10548,7 @@ body.dark-mode.nav {
   }
 
   .ms-md-5 {
-    margin-left: 3rem !important;
+    margin-left: -15rem !important;
   }
 
   .ms-md-auto {
@@ -12998,8 +12998,9 @@ body {
   /* adjust or remove as needed */
   width: auto;
   /* or set a max-width if needed */
-  max-width: 400px;
+  max-width: 100%;
   /* optional: set a max width for the tree */
+  height: auto;
 }
 
 
@@ -13294,4 +13295,40 @@ section#about {
   bottom: 0;             
   left: -5rem;         
   z-index: 1;          
+}
+
+.brandeis-seal {
+  max-width: 50%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.calhoun-seal {
+  max-width: 40%;
+  height: auto;
+  margin-top: 10px;
+  margin-right: -7rem;
+}
+
+/* Mobile Overrides */
+@media (max-width: 767.98px) {
+  p,
+  #education li,
+  #experience li {
+    margin-left: 0 !important;
+    text-align: center;
+  }
+
+  h1 {
+    margin-left: 0 !important;
+    text-align: center;
+  }
+
+  /* Make sure no fixed-width elements overflow */
+  .img-fluid,
+  iframe,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
 }
