@@ -202,13 +202,15 @@ h1 {
 
 hr {
   display: block;
-  width: 80vw;
-  margin-left: auto;
-  margin-right: auto;
+  width: calc(100% + 15rem);
+  margin-left: -156rem;   
   border: none;
   border-top: 1.5px solid #7d7d7d;
   opacity: 1;
 }
+
+
+
 
 
 h6,
@@ -8651,6 +8653,12 @@ body.dark-mode.nav {
 
 .m-0 {
   margin: 0 !important;
+  display: block;
+  width: calc(50% + 25rem); /* Matches your shifted layout */
+  margin-left: -15rem;
+  border: none;
+  border-top: 1.5px solid #7d7d7d;
+  opacity: 1;
 }
 
 .m-1 {
@@ -13259,6 +13267,17 @@ div.year {
 }
 
 .about-image img {
-  border-radius: 20%;
   margin-left: -9.5rem;
+}
+
+.portrait-dark {
+  display: none;
+}
+
+body.dark-mode .portrait-light {
+  display: none;
+}
+
+body.dark-mode .portrait-dark {
+  display: block;
 }
