@@ -13304,10 +13304,70 @@ section#about {
 
 #about li {
   text-align: left !important;
-  left: auto !important;
+  margin-left: -15rem !important;
 }
 
 #about h1 {
   text-align: left;
   margin-left: -15rem;
+}
+
+/* Hamburger icon – hidden on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+}
+
+/* Default nav (desktop) */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Mobile @ ≤768px */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .nav-links.active {
+    max-height: 300px; /* enough to show all links */
+  }
+}
+
+/* Tweak spacing at ≤480px if you like */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+  .nav-links a {
+    padding: 0.75rem 0;
+    width: 100%;
+    text-align: center;
+  }
 }
