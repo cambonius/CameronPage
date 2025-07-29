@@ -203,7 +203,7 @@ h1 {
 hr {
   display: block;
   width: calc(100% + 15rem);
-  margin-left: -156rem;   
+  margin-left: -156rem;
   border: none;
   border-top: 1.5px solid #7d7d7d;
   opacity: 1;
@@ -9193,6 +9193,7 @@ body.dark-mode.nav {
 }
 
 .text-nowrap {
+  text-align: left;
   white-space: nowrap !important;
 }
 
@@ -10548,7 +10549,7 @@ body.dark-mode.nav {
   }
 
   .ms-md-5 {
-    margin-left: -15rem !important;
+    margin-left: -2rem !important;
   }
 
   .ms-md-auto {
@@ -13248,14 +13249,12 @@ div.year {
 }
 
 .portrait-dark {
-  margin-left: -15rem;
   display: none;
 }
 
 .portrait-light {
   max-width: 300px;
   border-radius: 20%;
-  margin-left: -15rem;
   border: 3px solid rgba(0, 0, 0, 1);
   display: block;
 }
@@ -13274,27 +13273,20 @@ section#about {
   justify-content: center;
 }
 
-/* put this at the bottom of styles.css */
-#about li {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  text-align: left !important;
-}
-
 .about-image {
   position: relative;
 }
 
 .about-image .me-image {
-  position: relative; 
+  position: relative;
   z-index: 2;
+  right: -5rem;
 }
 
 .about-image .dog-image {
   position: absolute;
-  bottom: 0;             
-  left: -5rem;         
-  z-index: 1;          
+  bottom: 0;
+  z-index: 1;
 }
 
 .brandeis-seal {
@@ -13310,25 +13302,12 @@ section#about {
   margin-right: -7rem;
 }
 
-/* Mobile Overrides */
-@media (max-width: 767.98px) {
-  p,
-  #education li,
-  #experience li {
-    margin-left: 0 !important;
-    text-align: center;
-  }
+#about li {
+  text-align: left !important;
+  left: auto !important;
+}
 
-  h1 {
-    margin-left: 0 !important;
-    text-align: center;
-  }
-
-  /* Make sure no fixed-width elements overflow */
-  .img-fluid,
-  iframe,
-  video {
-    max-width: 100%;
-    height: auto;
-  }
+#about h1 {
+  text-align: left;
+  margin-left: -15rem;
 }
