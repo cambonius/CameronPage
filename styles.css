@@ -74,11 +74,12 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #198754;
-  --bs-link-hover-color: #115b39;
+  --bs-link-color: #003366;
+  --bs-link-hover-color: #00162b;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
-  --primary-green: #198754; /* Define the color variable */
+  --primary-green: #198754;
+  /* Define the color variable */
 }
 
 *,
@@ -102,7 +103,8 @@
 body.dark-mode {
   background-color: #212529;
   color: white;
-  --primary-green: #198754; /* Keep the same color in dark mode */
+  --primary-green: #198754;
+  /* Keep the same color in dark mode */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -114,18 +116,20 @@ body.dark-mode {
 }
 
 .dark-mode .text-primary {
-    color: #dbdbdb !important;
+  color: #dbdbdb !important;
 }
 
 
 /* Ensure green text stays green in dark mode */
 body.dark-mode .text-success {
-    color: #28a745 !important; /* Bootstrap's default green color */
+  color: #28a745 !important;
+  /* Bootstrap's default green color */
 }
 
 /* Example for inline styles or specific elements */
 body.dark-mode .custom-green {
-    color: #28a745 !important; /* Replace with your specific green color */
+  color: #28a745 !important;
+  /* Replace with your specific green color */
 }
 
 body.dark-mode .subheading {
@@ -136,6 +140,14 @@ body.dark-mode .subheading {
 body.dark-mode a {
   color: #cccccc;
   /* Adjust link color for better visibility */
+}
+
+body.dark-mode p {
+  color: #ffffff;
+}
+
+body.dark-mode li {
+  color: #ffffff;
 }
 
 body.dark-mode .navbar {
@@ -162,7 +174,8 @@ body {
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
-  color: #343A40; /* Dark gray for light mode */
+  color: #343A40;
+  /* Dark gray for light mode */
   text-align: var(--bs-body-text-align);
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
@@ -182,17 +195,23 @@ h1 {
 /* Dark mode styles */
 @media (prefers-color-scheme: dark) {
   body {
-    color: #FFFFFF; /* White for dark mode */
+    color: #FFFFFF;
+    /* White for dark mode */
   }
 }
 
 hr {
-  margin: 1rem 0;
-  color: inherit;
-  border: 0;
-  border-top: 1px solid;
-  opacity: 0.25;
+  display: block;
+  width: calc(100% + 15rem);
+  margin-left: -156rem;
+  border: none;
+  border-top: 1.5px solid #7d7d7d;
+  opacity: 1;
 }
+
+
+
+
 
 h6,
 .h6,
@@ -208,32 +227,42 @@ h1,
 .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   line-height: 1.2;
-  color: #343a40; /* Default header text color */
+  color: #343a40;
+  /* Default header text color */
 }
 
 /* Default styles for light mode */
-h1, h2, h3, h4, h5, h6 {
-  color: #343A40; /* Default header text color */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #343A40;
+  /* Default header text color */
 }
 
 .text-green {
-  color: #198754; /* Green text remains unchanged */
+  color: #198754;
+  /* Green text remains unchanged */
 }
 
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3,
-body.dark-mode h4{
-  color: #FFFFFF; /* White for dark mode */
+body.dark-mode h4 {
+  color: #FFFFFF;
+  /* White for dark mode */
 }
 
 /* Dark mode styles */
-  .text-green {
-    color: #198754; /* Ensure green text stays the same */
-  }
+.text-green {
+  color: #198754;
+  /* Ensure green text stays the same */
+}
 
 h1,
 .h1 {
@@ -301,6 +330,13 @@ h6,
 
 p,
 #education li {
+  margin-top: 0;
+  text-align: left;
+  margin-left: -15rem;
+}
+
+p,
+#experience li {
   margin-top: 0;
   text-align: left;
   margin-left: -15rem;
@@ -777,16 +813,21 @@ figcaption {
 }
 
 .image-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .project-image {
   width: 100%;
-  margin-right: 10px;
+  /* fallback */
+  max-width: 48%;
 }
+
+@media (max-width: 768px) {
+  .project-image {
+    max-width: 100%;
+  }
+}
+
 
 .project-image:last-child {
   margin-right: 0;
@@ -8611,6 +8652,12 @@ body.dark-mode.nav {
 
 .m-0 {
   margin: 0 !important;
+  display: block;
+  width: 80%;
+  margin: 2rem auto;
+  border: none;
+  border-top: 1.5px solid #7d7d7d;
+  opacity: 1;
 }
 
 .m-1 {
@@ -8791,7 +8838,6 @@ body.dark-mode.nav {
 
 .bio-text {
   text-align: left;
-  margin-left: -15rem;
 }
 
 .mb-auto {
@@ -9147,6 +9193,7 @@ body.dark-mode.nav {
 }
 
 .text-nowrap {
+  text-align: left;
   white-space: nowrap !important;
 }
 
@@ -10502,7 +10549,7 @@ body.dark-mode.nav {
   }
 
   .ms-md-5 {
-    margin-left: 3rem !important;
+    margin-left: -2rem !important;
   }
 
   .ms-md-auto {
@@ -12750,20 +12797,7 @@ body.dark-mode.nav {
   }
 }
 
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-  text-transform: uppercase;
-}
+
 
 h1,
 .h1 {
@@ -12771,17 +12805,16 @@ h1,
 }
 
 p.lead {
-  font-size: 1.15rem;
-  font-weight: 400;
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
 .subheading {
-  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  text-transform: uppercase;
+  font-family: 'Nunito', sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
-  text-align: left;
   margin-left: -15rem;
+
 }
 
 #sideNav {
@@ -12859,11 +12892,11 @@ p.lead {
   border-radius: 100%;
   text-align: left;
   font-size: 1.5rem;
-  margin-left: -9.5rem;
+  margin-left: -15rem;
 }
 
 .social-icons .social-icon:last-child {
-  margin-right: 0;
+  margin-left: -9.5rem;
 }
 
 .social-icons .social-icon:hover {
@@ -12871,28 +12904,24 @@ p.lead {
 }
 
 .dev-icons {
-  margin-left: -15rem;
   font-size: 3rem;
 }
+
 
 section.resume-section {
   display: flex;
   align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  max-width: 75rem;
 }
 
 section.resume-section .resume-section-content {
   width: 100%;
 }
 
-.resume-section #about .resume-section-content .lead {
-    text-align: right;
-    margin-left: 0;
-    margin-right: auto;
+
+.resume-section-content ul {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  list-style-position: inside !important;
 }
 
 .resume-section #about .social-icons {
@@ -12902,18 +12931,11 @@ section.resume-section .resume-section-content {
 }
 
 
+
+
 @media (min-width: 768px) {
   section.resume-section {
     min-height: 100vh;
-  }
-}
-
-@media (min-width: 992px) {
-  section.resume-section {
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
   }
 }
 
@@ -12963,174 +12985,216 @@ input:checked+.slider:before {
   transform: translateX(26px);
 }
 
-html, body {
-    height: 100%;
-    min-height: 100%;
+html,
+body {
+  height: 100%;
+  min-height: 100%;
 }
 
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 42%; /* adjust or remove as needed */
-  width: auto;     /* or set a max-width if needed */
-  max-width: 400px; /* optional: set a max width for the tree */
+  margin-top: 42%;
+  /* adjust or remove as needed */
+  width: auto;
+  /* or set a max-width if needed */
+  max-width: 100%;
+  /* optional: set a max width for the tree */
+  height: auto;
 }
 
 
 #mainNav {
-    background: transparent !important;
-    box-shadow: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
 #mainNav .navbar-nav {
-    gap: 32px;
+  gap: 32px;
 }
+
 #mainNav .nav-link {
-    font-size: 1rem;
-    font-family: 'Open Sans', sans-serif;
-    color: black;
-    letter-spacing: 1px;
-    font-weight: 600;
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  letter-spacing: 1px;
+  font-weight: 600;
 }
 
 /* Light mode styles (default) */
 .nav-link {
-  color: #000000; /* black or default color */
+  color: #000000;
+  /* black or default color */
 }
 
 /* Dark mode override */
 body.dark-mode .nav-link {
-  color: #dbdbdb !important; /* light text for dark background */
+  color: #dbdbdb !important;
+  /* light text for dark background */
 }
 
 #mainNav .nav-link.dark-mode {
-    font-size: 1.25rem;
-    font-family: 'Open Sans', sans-serif;
-    color: white !important;
-    letter-spacing: 1px;
-    font-weight: 500;
+  font-size: 1.25rem;
+  font-family: 'Open Sans', sans-serif;
+  color: white !important;
+  letter-spacing: 1px;
+  font-weight: 500;
 }
 
 .slide-up-text {
-    position: absolute;
-    left: 50%;
-    top: 15%;
-    transform: translate(-50%, 200%);
-    opacity: 0;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #222;
-    animation: slideUpFadeIn 1.2s ease-out 0.5s forwards;
-    z-index: 2;
-    width: max-content;
-    max-width: 90vw;
-    text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, 200%);
+  opacity: 0;
+  font-size: clamp(1rem, 3vw, 2.5rem);
+  font-weight: bold;
+  color: #222;
+  animation: slideUpFadeIn 1.2s ease-out 0.5s forwards;
+  z-index: 2;
+  width: max-content;
+  max-width: 90vw;
+  text-align: center;
 }
 
 body.dark-mode .slide-up-text {
-  color: #dbdbdb; 
+  color: #dbdbdb;
 }
 
 
 .slide-up-text-two {
-    position: absolute;
-    left: 50%;
-    top: 20%;
-    transform: translate(-50%, 100%);
-    opacity: 0;
-    font-size: 5.5rem;
-    font-weight: 600;
-    color: #222;
-    animation: slideUpFadeIn 2.0s ease-out 1.5s forwards;
-    z-index: 2;
-    width: max-content;
-    max-width: 90vw;
-    text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, 100%);
+  opacity: 0;
+  font-size: clamp(2rem, 6vw, 5rem);
+  font-weight: 600;
+  color: #222;
+  animation: slideUpFadeIn 2.0s ease-out 1.5s forwards;
+  z-index: 2;
+  width: max-content;
+  max-width: 90vw;
+  text-align: center;
 }
 
 body.dark-mode .slide-up-text-two {
-  color: #dbdbdb; 
+  color: #dbdbdb;
 }
 
 @media (max-width: 768px) {
-    .slide-up-text {
-        font-size: 1.5rem;
-        top: 18%;
-        padding: 0.4em 0.8em;
-    }
+  .slide-up-text {
+    font-size: 1.5rem;
+    top: 18%;
+    padding: 0.4em 0.8em;
+  }
 }
 
 @keyframes slideUpFadeIn {
-    to {
-        transform: translateX(-50%) translateY(0);
-        opacity: 1;
-    }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
 }
 
+.title-wrapper {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20vh;
+  text-align: center;
+}
 
-
+.name-wrapper {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20vh;
+  text-align: center;
+}
 
 
 body {
-    padding-top: 3.375rem;
-    color: #6c757d;
-    background-image:
-        url('assets/img/Tree.png'),   
-        url('assets/img/BackgroundFlipped.png'),        /* Alternating flipped */
-        url('assets/img/Background.png');               /* First background */
-    background-position:
-        center bottom,     /* Tree: bottom center */
-        center 1080px,     /* Flipped: starts after first section */
-        center 0;          /* First background: top center */
-    background-size:
-        600px auto,        /* Tree: adjust width as needed */
-        1920px 1080px,     /* Flipped: full section */
-        1920px 1080px;     /* First background: full section */
-    background-repeat:
-        no-repeat,         /* Tree: show only once */
-        repeat-y,          /* Flipped: repeat vertically */
-        repeat-y;         /* First background: show only once */
-    background-color: transparent;
+  padding-top: 3.375rem;
+  background-image:
+    url('assets/img/Tree.png'),
+    url('assets/img/BackgroundFlipped.png'),
+    url('assets/img/Background.png');
+  background-position:
+    center calc(100% + 70px),
+    center top,
+    center top;
+  background-size:
+    50vw 65vh,
+    cover,
+    cover;
+  background-repeat:
+    no-repeat,
+    repeat-y,
+    repeat-y;
+  background-attachment:
+    scroll,
+    fixed,
+    fixed;
+  background-color: transparent;
 }
 
 body.dark-mode {
-    padding-top: 3.375rem;
-    color: #6c757d;
-    background-image:
-        url('assets/img/TreeDark.png'),           /* The tree, bottom of first section */
-        url('assets/img/BackgroundFlippedDark.png'),        /* Alternating flipped */
-        url('assets/img/BackgroundDark.png');               /* First background */
-    background-position:
-        center bottom,     /* Tree: bottom center */
-        center 1080px,     /* Flipped: starts after first section */
-        center 0;          /* First background: top center */
-    background-size:
-        600px auto,        /* Tree: adjust width as needed */
-        1920px 1080px,     /* Flipped: full section */
-        1920px 1080px;     /* First background: full section */
-    background-repeat:
-        no-repeat,         /* Tree: show only once */
-        repeat-y,          /* Flipped: repeat vertically */
-        repeat-y;         /* First background: show only once */
-    background-color: transparent;
+  padding-top: 3.375rem;
+  background-image:
+    url('assets/img/TreeDark.png'),
+    url('assets/img/BackgroundFlippedDark.png'),
+    url('assets/img/BackgroundDark.png');
+  background-position:
+    center calc(100% + 70px),
+    center top,
+    center top;
+  background-size:
+    50vw 65vh,
+    cover,
+    cover;
+  background-repeat:
+    no-repeat,
+    repeat-y,
+    repeat-y;
+  background-attachment:
+    scroll,
+    fixed,
+    fixed;
+  background-color: transparent;
 }
 
+
 .cv-container {
+  margin: 0 auto;
   text-align: left;
-  margin-left: -15rem;
+  max-width: 100%;
 }
 
 .cv-heading {
-  text-align: center; 
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .cv-container div {
+    height: 400px;
+    /* Reduce preview height on smaller screens */
+  }
 }
 
 .interest-logos {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem; /* Adjust spacing between logos */
-  flex-wrap: wrap; /* Wrap on smaller screens */
+  gap: 2rem;
+  /* Adjust spacing between logos */
+  flex-wrap: wrap;
+  /* Wrap on smaller screens */
   margin-top: 1rem;
   margin-bottom: 1rem;
   margin-left: -15rem;
@@ -13141,9 +13205,169 @@ body.dark-mode {
   width: 100%;
 }
 
-hr {
-  width: 75%; /* Or any fixed width like 600px */
-  margin: auto; /* Center horizontally */
-  border-top: 2px solid #ccc; /* Optional: make the line bolder or styled */
-  opacity: 0.5; /* Optional: adjust visibility */
+
+/* Global hyperlink styling */
+a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #011f3d;
+  text-decoration: underline;
+}
+
+/* Apply Besley font to job titles */
+h3.mb-0 {
+  font-family: 'Besley', serif;
+}
+
+/* Apply Besley font to company/location lines */
+.subheading.mb-3 {
+  font-family: 'Besley', serif;
+}
+
+
+.section-title {
+  font-family: 'Besley', serif;
+  font-weight: 700;
+  text-transform: none;
+}
+
+div.right {
+  text-align: right;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #000;
+}
+
+div.year {
+  text-align: center;
+  font-weight: 800;
+  font-size: 2rem;
+  color: #000;
+}
+
+.portrait-dark {
+  display: none;
+}
+
+.portrait-light {
+  max-width: 300px;
+  border-radius: 20%;
+  border: 3px solid rgba(0, 0, 0, 1);
+  display: block;
+}
+
+
+body.dark-mode .portrait-light {
+  display: none;
+}
+
+body.dark-mode .portrait-dark {
+  display: block;
+}
+
+/* Horizontally center the About section */
+section#about {
+  justify-content: center;
+}
+
+.about-image {
+  position: relative;
+}
+
+.about-image .me-image {
+  position: relative;
+  z-index: 2;
+  right: -5rem;
+}
+
+.about-image .dog-image {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.brandeis-seal {
+  max-width: 50%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.calhoun-seal {
+  max-width: 40%;
+  height: auto;
+  margin-top: 10px;
+  margin-right: -7rem;
+}
+
+#about li {
+  text-align: left !important;
+  margin-left: -15rem !important;
+}
+
+#about h1 {
+  text-align: left;
+  margin-left: -15rem;
+}
+
+/* Hamburger icon – hidden on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+}
+
+/* Default nav (desktop) */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Mobile @ ≤768px */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .nav-links.active {
+    max-height: 300px; /* enough to show all links */
+  }
+}
+
+/* Tweak spacing at ≤480px if you like */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+  .nav-links a {
+    padding: 0.75rem 0;
+    width: 100%;
+    text-align: center;
+  }
 }
